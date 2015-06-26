@@ -20,6 +20,9 @@
             var stats = fs.statSync(filePath);
             stats.encoding = encoding.encoding;
             stats.encodingConfidence = encoding.confidence;
+			if(encoding.confidence<0.8){
+				stats.encoding ="SHIFT_JIS";
+			}
             stats.name = path.basename(filePath);
             stats.path = filePath;
             stats.hash = stats.mtime.getTime();
