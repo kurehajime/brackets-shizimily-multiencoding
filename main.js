@@ -29,7 +29,7 @@ define(function (require, exports, module) {
 
     var firstQueue = [];
     var currentDocument = {};
-    var force = false;
+    var force = true;
 
     /**
      * Log the message to the console
